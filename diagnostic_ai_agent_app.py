@@ -5,7 +5,7 @@ import openai
 
 # Set your OpenAI API key here or use Streamlit secrets
 openai.api_key = st.secrets.get("OPENAI_API_KEY", "your-api-key-here")
-st.write("API key loaded:", st.secrets["OPENAI_API_KEY"][:8] + "****")
+
 
 # Function to process each entry with OpenAI
 def process_entry(conversation, issue_description):
