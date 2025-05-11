@@ -53,7 +53,7 @@ if uploaded_file:
     if st.button("Run AI Analysis"):
         st.info("Processing... Please wait.")
 
-        results = df.apply(lambda row: process_entry(str(row[1]), str(row[2])), axis=1)
+        results = df.apply(lambda row: process_entry(str(row["Complaint"]), str(row["Issue Description"])), axis=1)
         df["AI Output"] = results
 
         # Extract fields if possible
