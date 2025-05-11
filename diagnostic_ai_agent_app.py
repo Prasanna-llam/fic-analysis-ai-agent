@@ -3,7 +3,7 @@ import pandas as pd
 from openai import OpenAI
 
 # Load API key
-api_key = st.secrets.get("OPENAI_API_KEY",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)
+api_key = st.secrets.get("OPENAI_API_KEY",None)
 if not api_key:
     st.error("Missing OpenAI API key. Please set OPENAI_API_KEY in secrets.toml or Streamlit Cloud.")
     st.stop()
